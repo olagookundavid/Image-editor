@@ -8,23 +8,40 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue[200],
       body: Center(
-        child: IconButton(
-          onPressed: () async {
-            XFile? file =
-                await ImagePicker().pickImage(source: ImageSource.gallery);
-            if (file != null) {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: ((context) => EditImageScreen(
-                        selectedImage: file.path,
-                      )),
-                ),
-              );
-            }
-          },
-          icon: const Icon(Icons.upload_file),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            const Text(
+              'Pick An Image To\nedit',
+              style: TextStyle(
+                  color: Colors.white70,
+                  fontSize: 30,
+                  letterSpacing: 3,
+                  fontStyle: FontStyle.italic),
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            IconButton(
+              onPressed: () async {
+                XFile? file =
+                    await ImagePicker().pickImage(source: ImageSource.gallery);
+                if (file != null) {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: ((context) => EditImageScreen(
+                            selectedImage: file.path,
+                          )),
+                    ),
+                  );
+                }
+              },
+              icon: const Icon(Icons.upload_file, size: 50),
+            ),
+          ],
         ),
       ),
     );

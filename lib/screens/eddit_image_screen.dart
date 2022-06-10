@@ -18,6 +18,7 @@ class _EditImageScreenState extends EditImageViewModel {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.blue[200],
       appBar: _appbar,
       body: SafeArea(
         child: Screenshot(
@@ -98,7 +99,7 @@ class _EditImageScreenState extends EditImageViewModel {
       );
 
   AppBar get _appbar => AppBar(
-        backgroundColor: Colors.grey[300],
+        backgroundColor: Colors.grey[400],
         automaticallyImplyLeading: false,
         title: SizedBox(
           height: 50,

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'screens/homescreen.dart';
+import 'screens/base_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -8,14 +7,13 @@ void main() {
 
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Image Editor',
       theme: ThemeData.light(),
-      home: const HomeScreen(),
+      home: const BaseScreen(),
     );
   }
 }
