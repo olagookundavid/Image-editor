@@ -17,3 +17,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+
+//https://blog.logrocket.com/using-sharedpreferences-in-flutter-to-store-data-locally/ 
